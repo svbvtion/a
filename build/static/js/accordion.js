@@ -1,0 +1,1 @@
+const accordion=()=>{const e=document.querySelectorAll(".box__header"),t=document.querySelectorAll(".box__content");e.forEach(((e,c)=>{e.addEventListener("click",(()=>{e.classList.contains("active")?(e.classList.toggle("active"),t[c].style.maxHeight=0):(e.classList.toggle("active"),t[c].style.maxHeight=t[c].scrollHeight+"px")}))}))};

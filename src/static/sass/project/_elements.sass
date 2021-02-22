@@ -1,0 +1,76 @@
+html, body
+	height: 100%
+
+body
+	&.lock
+		+phone
+			overflow: hidden
+	//font-family: $font-primary
+$wrapper: 1200
+$wrapperPadding: 20
+
+*,
+*::before,
+*::after
+	margin: 0
+	padding: 0
+	border: 0
+	box-sizing: border-box
+a
+	text-decoration: none
+	color: inherit
+h1, h2, h3, h4, h5 h6
+	color: inherit
+img
+	vertical-align: top
+.wrapper
+	max-width: $wrapper+px
+	margin: 0 auto
+	height: 100%
+	+r($wrapper)
+		padding: 0 $wrapperPadding+px
+
+.container
+	height: 100%
+	+flex(space-between)
+	flex-direction: column
+
+.content
+	flex: 1
+
+.menu
+	&__list
+		list-style: none
+		+flex
+	&__item
+		margin-left: 30px
+	&__link
+		font-size: 20px
+		color: #fff
+		+smooth
+		&:hover
+			color: pink
+.header
+	&__body
+		+flex(space-between, center)
+	&__menu
+		+phone
+			+header-menu()
+			left: 100%
+			background-color: #fff
+			z-index: 100
+			&.active
+				left: 0
+			.menu
+				&__list
+					flex-direction: column
+				&__item
+					margin-left: 0
+					border-bottom: 1px solid #000
+				&__link
+					display: block
+					padding: 15px 0
+					color: #000
+
+.burger
+	+burger(30, 20, 2, #000)

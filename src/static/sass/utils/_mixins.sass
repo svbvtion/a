@@ -51,12 +51,12 @@
 		background-color: $color
 		+smooth
 
-=burger($width, $height, $bold, $color)
+=burger($width, $height, $bold, $color, $breakpoint:767)
 	width: $width+px
 	height: $height+px
 	position: relative
 	display: none
-	+phone
+	+r($breakpoint)
 		display: block
 
 	&__decor, &:before, &:after
@@ -132,29 +132,6 @@
 	bottom: $b
 	left: $b
 
-// fix breakpoints
-
-=desktops
-	@media (min-width: 1200px)
-		@content
-=medium-desktops
-	@media (min-width: 992px) and (max-width: 1199px)
-		@content
-=small-desktops
-	@media (min-width: 768px) and (max-width: 991px)
-		@content
-
-=phone
-	@media (max-width: 767px)
-		@content
-=portrait-phones
-	@media (max-width: 480px)
-		@content
-=small-phones
-	@media (max-width: 320px)
-		@content
-
-//peculiar breakpoints
 
 =r($width)
 	@media (max-width:$width+'px')
@@ -165,7 +142,9 @@
 =portrait()
 	@media (orientation: portrait)
 		@content
-
+=phone
+	@media (max-width: 767px)
+		@content
 =ratio($val)
 	@media (max-aspect-ratio: $val)
 		@content

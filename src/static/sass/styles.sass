@@ -6,3 +6,67 @@
 @import 'core/_vars'
 
 @import 'project/_elements'
+body
+	background-color: #edeae5
+.box
+	+flex
+	flex-wrap: wrap
+	margin: -20px 0 0 -20px
+	&__item
+		margin: 20px 0 0 20px
+	&__sidebar
+
+		flex: 1 1 200px
+	&__content
+		flex: 3 1 500px
+		font-size: 2em
+		text-align: center
+.content
+	padding: 100px 0
+.categories
+	background-color: #fff
+	border-radius: 30px
+	padding: 10px 15px 20px
+	margin-bottom: 20px
+	box-shadow: 0 5px 7px rgba(#000, .1)
+	&__button
+		background-color: #ff9689
+		display: block
+		text-align: center
+		color: #fff
+		border-radius: 30px
+		padding: 15px
+		font-size: 1.3em
+		font-family: sans-serif
+		font-weight: bold
+		+smooth
+		&:hover
+			background-color: darken(#ff9689, 10%)
+
+	&__nav
+		margin-top: 20px
+	&__menu
+		list-style: none
+	&__text
+		color: grey
+		+smooth
+	&__item	
+		margin-bottom: 10px
+		&:hover
+			.categories
+				&__icon
+					background-color: darken(#ff9689, 10%)
+					border-radius: 50%
+				&__text
+					color: #000
+
+	&__link
+		+flex(start, center)
+
+	&__icon
+		display: block
+		background-color: #ff9689
+		height: 20px
+		width: 20px
+		margin-right: 10px
+		+smooth

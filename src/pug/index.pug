@@ -1,4 +1,5 @@
 include mixins/mixin
+include mixins/sections/sections
 doctype html
 html(lang="ru")
 	head
@@ -8,11 +9,115 @@ html(lang="ru")
 		meta(name="description" content="desrc")
 		title Document
 		link(rel='icon' href='./favicon.ico' type='image/x-icon')
-		link(rel="stylesheet" type="text/css" href="static/css/normalize.css")
 		link(rel="stylesheet" type="text/css" href="static/css/styles.css")
 	body
-		header.hero
 
-		main.content
+		.container
+			
+			main.content
+				.wrapper
+					.box
+						.box__sidebar.sidebar.box__item
+							.sidebar__item.categories
+								a.categories__button(href="#")  Лучшие сборки
+								nav.categories__nav
+									ul.categories__menu
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Русская версия
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Оригиинальная версия
+										li.categories__item
+											a.categories__link(href="#") 
+												.categories__icon
+												.categories__text CS 1.6 GO
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Русский мясник
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Zombie
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 с ботами
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 СССР
 
-		footer.footer
+							.sidebar__item.categories
+								a.categories__button(href="#")  Тематические сборки
+								nav.categories__nav
+									ul.categories__menu
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Stream
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 FPS
+										li.categories__item
+											a.categories__link(href="#") 
+												.categories__icon
+												.categories__text CS 1.6 HD
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 NaVi
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Minecraft
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Gold
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 GTA
+							.sidebar__item.categories
+								a.categories__button(href="#")  Сборки ютуберов
+								nav.categories__nav
+									ul.categories__menu
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Stream
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 FPS
+										li.categories__item
+											a.categories__link(href="#") 
+												.categories__icon
+												.categories__text CS 1.6 HD
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 NaVi
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Minecraft
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 Gold
+										li.categories__item
+											a.categories__link(href="#")
+												.categories__icon
+												.categories__text CS 1.6 GTA
+
+						.box__content.box__item Content
+			footer.footer
+		
+		//script(src="static/js/menu.js")
+		//- link(rel="stylesheet" type="text/css" href="" media="print" onload="this.media='all'")
