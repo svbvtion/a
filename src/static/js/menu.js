@@ -1,19 +1,15 @@
-'use strict';
+const menu = (headerClass, headerMenuClass, burgerClass='.burger') => {
+	const header = document.querySelector(headerClass);
+	const headerMenu = document.querySelector(headerMenuClass);
+	const burger = document.querySelector(burgerClass);
 
-const header = document.querySelector('.menu-box');
-const headerMenu = document.querySelector('.header__menu');
-const burger = document.querySelector('.burger');
-
-
-burger.addEventListener('click', function(e) {
-	headerMenu.classList.toggle('active');
-	burger.classList.toggle('active');
-	document.body.classList.toggle('lock');
-});
-
-
-function menuTop() {
 	headerMenu.style.top = header.offsetHeight + 'px';
+
+	burger.addEventListener('click', (e) => {
+		headerMenu.classList.toggle('active');
+		burger.classList.toggle('active');
+		document.body.classList.toggle('lock');
+	});	
 }
 
-window.onload = menuTop()
+export {menu}

@@ -13,111 +13,151 @@ html(lang="ru")
 	body
 
 		.container
-			
+			//- +header
 			main.content
 				.wrapper
-					.box
-						.box__sidebar.sidebar.box__item
-							.sidebar__item.categories
-								a.categories__button(href="#")  Лучшие сборки
-								nav.categories__nav
-									ul.categories__menu
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Русская версия
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Оригиинальная версия
-										li.categories__item
-											a.categories__link(href="#") 
-												.categories__icon
-												.categories__text CS 1.6 GO
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Русский мясник
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Zombie
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 с ботами
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 СССР
+					//- .myBox
+					//- 	.myBox__bg
+					//- 		+webp('myBox__pic', '1000', 'jpg')
+					//- 	.myBox__content
+					//- 		.myBox__text
+					//- 			span David 
+					//- 			span Becks
 
-							.sidebar__item.categories
-								a.categories__button(href="#")  Тематические сборки
-								nav.categories__nav
-									ul.categories__menu
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Stream
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 FPS
-										li.categories__item
-											a.categories__link(href="#") 
-												.categories__icon
-												.categories__text CS 1.6 HD
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 NaVi
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Minecraft
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Gold
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 GTA
-							.sidebar__item.categories
-								a.categories__button(href="#")  Сборки ютуберов
-								nav.categories__nav
-									ul.categories__menu
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Stream
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 FPS
-										li.categories__item
-											a.categories__link(href="#") 
-												.categories__icon
-												.categories__text CS 1.6 HD
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 NaVi
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Minecraft
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 Gold
-										li.categories__item
-											a.categories__link(href="#")
-												.categories__icon
-												.categories__text CS 1.6 GTA
 
-						.box__content.box__item Content
+					.projects
+						.projects__item.project
+							.project__bg
+								+webp('project__pic', '1', 'jpg', 'project image')
+							.project__content
+								.project__descr
+									span.project__title Проект дома
+									ul.project__list
+										li.project__list_item
+											span.decor
+											span.txt 174 м
+										li.project__list_item
+											span.decor
+											span.txt 7.8 x 15
+										li.project__list_item
+											span.decor
+											span.txt 60 дней
+										li.project__list_item
+											span.decor
+											span.txt 2
+									span.project__price от 1 400 000 р
+							.project__more Подробнее
+						.projects__item.project
+							.project__bg
+								+webp('project__pic', '2', 'jpg', 'project image')
+							.project__content
+								.project__descr
+									span.project__title Проект дома
+									ul.project__list
+										li.project__list_item
+											span.decor
+											span.txt 174 м
+										li.project__list_item
+											span.decor
+											span.txt 7.8 x 15
+										li.project__list_item
+											span.decor
+											span.txt 60 дней
+										li.project__list_item
+											span.decor
+											span.txt 2
+									span.project__price от 1 400 000 р
+							.project__more Подробнее
+						.projects__item.project
+							.project__bg
+								+webp('project__pic', '3', 'jpg', 'project image')
+							.project__content
+								.project__descr
+									span.project__title Проект дома
+									ul.project__list
+										li.project__list_item
+											span.decor
+											span.txt 174 м
+										li.project__list_item
+											span.decor
+											span.txt 7.8 x 15
+										li.project__list_item
+											span.decor
+											span.txt 60 дней
+										li.project__list_item
+											span.decor
+											span.txt 2
+									span.project__price от 1 400 000 р
+							.project__more Подробнее
+						.projects__item.project
+							.project__bg
+								+webp('project__pic', '4', 'jpg', 'project image')
+							.project__content
+								.project__descr
+									span.project__title Проект дома
+									ul.project__list
+										li.project__list_item
+											span.decor
+											span.txt 174 м
+										li.project__list_item
+											span.decor
+											span.txt 7.8 x 15
+										li.project__list_item
+											span.decor
+											span.txt 60 дней
+										li.project__list_item
+											span.decor
+											span.txt 2
+									span.project__price от 1 400 000 р
+							.project__more Подробнее
+						.projects__item.project
+							.project__bg
+								+webp('project__pic', '5', 'jpg', 'project image')
+							.project__content
+								.project__descr
+									span.project__title Проект дома
+									ul.project__list
+										li.project__list_item
+											span.decor
+											span.txt 174 м
+										li.project__list_item
+											span.decor
+											span.txt 7.8 x 15
+										li.project__list_item
+											span.decor
+											span.txt 60 дней
+										li.project__list_item
+											span.decor
+											span.txt 2
+									span.project__price от 1 400 000 р
+							.project__more Подробнее
+						.projects__item.project
+							.project__bg
+								+webp('project__pic', '6', 'jpg', 'project image')
+							.project__content
+								.project__descr
+									span.project__title Проект дома
+									ul.project__list
+										li.project__list_item
+											span.decor
+											span.txt 174 м
+										li.project__list_item
+											span.decor
+											span.txt 7.8 x 15
+										li.project__list_item
+											span.decor
+											span.txt 60 дней
+										li.project__list_item
+											span.decor
+											span.txt 2
+									span.project__price от 1 400 000 р
+							.project__more Подробнее
+
 			footer.footer
-		
-		//script(src="static/js/menu.js")
+				.wrapper
+					
+		//-script(src="static/js/main.js" type='module')
+		script(src="static/js/test.js")
+
+
 		//- link(rel="stylesheet" type="text/css" href="" media="print" onload="this.media='all'")

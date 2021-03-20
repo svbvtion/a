@@ -6,67 +6,176 @@
 @import 'core/_vars'
 
 @import 'project/_elements'
-body
-	background-color: #edeae5
-.box
-	+flex
-	flex-wrap: wrap
-	margin: -20px 0 0 -20px
-	&__item
-		margin: 20px 0 0 20px
-	&__sidebar
 
-		flex: 1 1 250px
-	&__content
-		flex: 7 1 400px
-		font-size: 2em
-		text-align: center
-.content
-	padding: 100px 0
-.categories
-	background-color: #fff
-	border-radius: 30px
-	padding: 15px 15px 20px
-	margin-bottom: 20px
-	box-shadow: 0 5px 7px rgba(#000, .1)
-	&__button
-		background-color: #ff9689
-		display: block
-		text-align: center
+.header
+	&__body
+		padding: 10px 0
+
+.tabs
+	&__items
+		+flex
+	&__item
+		padding: 5px 10px
+		background-color: #fff
+		cursor: pointer
+		&.active
+			background-color: pink
+	&__box
+		background-color: pink
+		padding: 25px
+		display: none
+		&.active
+			display: block
+.footer
+	height: 70vh
+	&__card
+		width: 550px
+		height: 550px
+		margin: 0 auto
+		position: relative
+		+flex(flex-end)
+		flex-direction: column
+		padding: 25px
+
+	&__pic
+	
+		+bg-pic
+		+gOverlay
+	&__img
+		+bg-pic(top)
+	&__text
+		position: relative
 		color: #fff
-		border-radius: 30px
-		padding: 15px
-		font-size: 1.3em
+		font-weight: bold
+		font-size: 3em
+
+.box
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: 10px
+	grid-template-rows: repeat(1, 2.3em)
+	grid-auto-rows: 550px
+	margin-bottom: 50px
+	&__item
+		width: 100%
+		overflow: hidden
+		position: relative
+	&__pic
+		+bg-pic(top)
+
+
+	.yep
+		transform: scale(1.2)
+		top: 50px
+p
+	font-weight: bold
+	font-family: sans-serif
+	text-transform: uppercase
+	font-size: 2em
+	text-align: center
+.hello
+	font-size: 3em
+
+.myBox
+	height: 500px
+	width: 1000px
+	position: relative
+	&:hover
+		.myBox
+			&__content
+				opacity: 0
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		mix-blend-mode: color
+	&__bg
+		+bg-box
+	&__pic
+		+bg-pic(top)
+
+	&__content
+		position: relative
+		width: 100%
+		height: 100%
+		background-color: #fff
+		+flex(center, center)
+		padding: 20px
+		mix-blend-mode: screen
+		text-align: center
+		line-height: 14em 
+		+smooth
+	&__text
+		font-size: 15em
+		font-family: sans-serif
+		font-weight: 1000
+		text-transform: uppercase
+
+
+.projects
+	+grid
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	
+	grid-gap: 20px
+
+.project
+	background-color: #fff
+	box-shadow: 0px 0px 20px rgba(#000, .05)
+	+smooth
+	&:hover
+		box-shadow: 0 10px 10px rgba(#000, .2)
+			
+	&__content
+		padding: 16px 24px 0 24px
+		position: relative
+	&__bg
+		position: relative
+		height: 50%
+		width: 100%
+		height: 200px
+		overflow: hidden
+		&:hover
+			.project
+				&__pic
+					transform: scale(1.2)
+	&__pic
+		+bg-pic(top)
+		+smooth
+	&__more
+		background-color: rgba(244, 244, 244, 0.7)
+		padding: 17px 0 13px 24px
+		text-transform: uppercase
+		color: #EA9635
+		font-family: sans-serif
+		font-size: 12px
+		+smooth
+		&:hover
+			background-color: #EA9635
+			color: #fff
+	&__list
+		list-style: none
+		&_item
+			display: inline-block
+	&__title
+		font-size: 22px
 		font-family: sans-serif
 		font-weight: bold
-		+smooth
-		&:hover
-			background-color: darken(#ff9689, 10%)
+		margin-bottom: 15px
+		display: inline-block
+	&__price
+		font-size: 20px
+		color: #EA9635
+		font-family: sans-serif
+		font-weight: bold
+		margin-bottom: 18px
+		display: inline-block
 
-	&__nav
-		margin-top: 20px
-	&__menu
-		list-style: none
-	&__text
-		color: grey
-		+smooth
-	&__item	
-		margin-bottom: 10px
-		&:hover
-			.categories
-				&__icon
-					background-color: darken(#ff9689, 10%)
-					border-radius: 50%
-				&__text
-					color: #000
+.decor
 
-	&__link
-		+flex(start, center)
+.txt
+	display: inline-block
+	margin-bottom: 12px
 
-	&__icon
-		display: block
-		background-color: #ff9689
-		height: 20px
-		width: 20px
-		margin-right: 10px
-		+smooth
