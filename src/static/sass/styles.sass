@@ -42,9 +42,9 @@ $font-excel: $gold
 
 .projects
 	+grid
-	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr))
+	grid-template-columns: repeat(2, 1fr)
 	grid-gap: 45px 30px
-	+r(400)
+	+r(667)
 		grid-template-columns: 1fr
 
 .project
@@ -63,15 +63,16 @@ $font-excel: $gold
 		flex: 1
 	&__bg
 		position: relative
-		height: 50%
 		width: 100%
-		height: 200px
+		height: 250px
 		overflow: hidden
 		display: block
 		&:hover
 			.project
 				&__pic
 					transform: scale(1.2)
+		+r(768)
+			height: 200px
 	&__pic
 		+bg-pic
 		+smooth
@@ -100,14 +101,20 @@ $font-excel: $gold
 		margin-bottom: 15px
 		display: inline-block
 	&__price
-		font-size: 20px
-		color: $font-excel
-		font-family: sans-serif
-		font-weight: bold
-		margin-bottom: 18px
-		display: inline-block
-		font-family: $font-primary
-
+		+flex
+		&_num
+			font-size: 20px
+			color: $font-excel
+			font-family: sans-serif
+			font-weight: bold
+			margin-bottom: 18px
+			display: inline-block
+			font-family: $font-primary
+		&_decor
+			margin-right: 15px
+			svg
+				height: 25px
+				width: 25px
 .characters
 	list-style: none
 	+flex(space-between, center)
