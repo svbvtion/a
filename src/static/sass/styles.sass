@@ -7,6 +7,11 @@
 
 @import 'project/_elements'
 
+
+body
+	font-family: $font-primary
+	color: #494949
+
 .wrapper
 
 .header
@@ -173,15 +178,13 @@ $font-excel: $gold
 			background-color: $gold
 			color: #fff
 			.more
-				&__arrow
-					background-color: #fff
-					&:before, &:after
-						border-color: #fff
+				&__icon
+					fill: #fff
+				
 	&__characters
 		margin-bottom: 15px
 	&__title
 		font-size: 22px
-		font-family: sans-serif
 		font-weight: bold
 		margin-bottom: 15px
 		display: inline-block
@@ -192,6 +195,7 @@ $font-excel: $gold
 		font-weight: bold
 		margin-bottom: 18px
 		display: inline-block
+		font-family: $font-primary
 
 .characters
 	list-style: none
@@ -221,21 +225,10 @@ $font-excel: $gold
 
 .more
 	+flex(start, center)
-	&__arrow
-		display: block
-		width: 19px
-		height: 2px
-		background-color: $gold
-		margin-left: 10px
-		position: relative
-		&:before
-			content: ''
-			position: absolute
-			display: block
-			height: 10px
-			width: 10px
-			border-top: 2px solid $gold
-			border-right: 2px solid $gold
-			transform: rotate(45deg)
-			top: -4px
-			right: 1px
+	&__text
+		font-family: $font-primary
+	&__icon
+		max-height: 25px
+		fill: $gold
+		max-width: 40px
+	
