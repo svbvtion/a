@@ -27,9 +27,11 @@ h1, h2, h3, h4, h5 h6
 	color: inherit
 img
 	vertical-align: top
+sup
+	line-height: 0
 
 .wrapper
-	max-width: 1180px
+	max-width: 1280px
 	margin: 0 auto
 	padding: 0 20px
 .content
@@ -44,8 +46,11 @@ $font-excel: $gold
 	+grid
 	grid-template-columns: repeat(2, 1fr)
 	grid-gap: 45px 30px
+	+r(767)
+		grid-gap: 45px 20px
 	+r(667)
 		grid-template-columns: 1fr
+
 
 .project
 	background-color: #fff
@@ -136,15 +141,7 @@ $font-excel: $gold
 		font-size: 14px
 		margin-bottom: 12px
 		
-	&__square
-		position: relative
-		&:before
-			content: '2'
-			position: absolute
-			right: -20%
-			top: -10%
-
-			font-size: 10px
+	
 	&__decor
 		svg
 			height: 18px
@@ -152,14 +149,34 @@ $font-excel: $gold
 			margin-right: 10px
 	
 
-
 .more
 	+flex(start, center)
 	&__text
 		font-family: $font-primary
 	&__decor
+		height: 20px
 		svg
-			max-height: 25px
+			height: 20px
 			fill: $gold
-			max-width: 40px
-	
+			width: 40px
+
+
+/*----- BRANDS -----*/
+
+.brands
+	display: grid
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
+	grid-auto-rows: 70px
+	grid-gap: 10px
+
+.brand
+	background-color: #b7cfb7
+	+flex(center, center)
+	text-transform: uppercase
+	+smooth
+	font-weight: bold
+	cursor: pointer
+	color: #fff
+	&:hover
+		background-color: #97c1a9
+		font-size: 1.1em
