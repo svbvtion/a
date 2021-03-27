@@ -170,11 +170,12 @@ ul.characters
 .container
 	+flex(space-between)
 	flex-direction: column
-	height: 100%
+	min-height: 100%
 	font-size: 3em
 	text-align: center
 	text-transform: uppercase
 	font-weight: bold
+
 .head
 	height: 100px
 	background-color: #ff9689
@@ -182,9 +183,26 @@ ul.characters
 	background-color:#edeae5
 	padding: 0
 	flex: 1
-	
+	padding: 20px
 .footer
 	height: 100px
 	background-color: #cce2cb
-.head, .content, .footer
+.head, .footer
 	+flex(center, center)
+
+.brands
+	width: 100%
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+
+	grid-gap: 10px
+	grid-auto-rows: 150px
+	&__item
+		background-color: #fff
+		font-size: 25px
+		+flex(center, center)
+
+.inp
+	padding: 10px 20px
+	margin-bottom: 30px
+	background-color: #fff
